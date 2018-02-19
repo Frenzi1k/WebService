@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://webservice.frenzi.com/" xmlns:tns="http://webservice.frenzi.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="getFile" type="tns:getFile"/>
+
+  <xs:element name="getFileResponse" type="tns:getFileResponse"/>
+
+  <xs:element name="getFilesName" type="tns:getFilesName"/>
+
+  <xs:element name="getFilesNameResponse" type="tns:getFilesNameResponse"/>
+
+  <xs:complexType name="getFile">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getFileResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:base64Binary" nillable="true" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getFilesName">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getFilesNameResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+
